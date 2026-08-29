@@ -1057,6 +1057,24 @@ V17 仍然没有做这些内容：
 
 当前版本让项目从“功能完整的本地工具”继续升级为“视觉更接近正式产品的本地工具”。
 
+## 部署上线记录
+
+项目已通过 GitHub Pages 部署上线。
+
+GitHub 仓库地址：
+
+```text
+https://github.com/wangyegzhm/simple-todo-list
+```
+
+线上访问地址：
+
+```text
+https://wangyegzhm.github.io/simple-todo-list/
+```
+
+当前线上版本来自 V17 视觉优化版。
+
 ## 下一步计划
 
 接下来可以按下面的顺序推进：

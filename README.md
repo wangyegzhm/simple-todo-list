@@ -327,6 +327,18 @@ Git = 本地存档系统
 GitHub = 网上备份位置
 ```
 
+## 线上访问地址
+
+这个项目已经通过 GitHub Pages 部署上线。
+
+线上访问地址：
+
+```text
+https://wangyegzhm.github.io/simple-todo-list/
+```
+
+当前线上版本来自 V17 视觉优化版。
+
 ## 当前文件说明
 
 - `PRODUCT.md`：产品说明文档，用来记录项目目标、使用场景、功能计划和当前完成情况。
