@@ -339,6 +339,29 @@ https://wangyegzhm.github.io/simple-todo-list/
 
 当前线上版本来自 V17 视觉优化版。
 
+## 项目完成状态
+
+当前项目已完成第一阶段。
+
+当前完成版基于 V17 视觉优化版。
+
+项目已经完成：
+
+- GitHub 备份
+- GitHub Pages 部署上线
+- 功能开发
+- 视觉优化
+- 学习记录整理
+- 项目文档整理
+
+线上访问地址：
+
+```text
+https://wangyegzhm.github.io/simple-todo-list/
+```
+
+这个版本可以作为“我的第一个 Codex 小工具完成版”保存。
+
 ## 当前文件说明
 
 - `PRODUCT.md`：产品说明文档，用来记录项目目标、使用场景、功能计划和当前完成情况。
