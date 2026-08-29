@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简单待办清单</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>简单待办清单</h1>
+
+    <section class="input-card" aria-label="添加待办事项">
+      <div class="todo-form">
+        <input id="todo-input" type="text" maxlength="60" placeholder="输入一件要做的事">
+        <select id="todo-priority" class="priority-select" aria-label="优先级">
+          <option value="low">低优先级</option>
+          <option value="medium" selected>中优先级</option>
+          <option value="high">高优先级</option>
+        </select>
+        <input id="todo-tag" class="tag-input" type="text" maxlength="20" placeholder="标签：学习">
+        <input id="todo-due-date" type="date" aria-label="截止日期">
+        <button id="add-button" type="button">添加</button>
+      </div>
+      <div class="quick-date-buttons" aria-label="快速设置截止日期">
+        <button class="quick-date-button" type="button" data-quick-date="today">今天</button>
+        <button class="quick-date-button" type="button" data-quick-date="tomorrow">明天</button>
+        <button class="quick-date-button" type="button" data-quick-date="clear">清除日期</button>
+      </div>
+      <textarea id="todo-note" maxlength="120" placeholder="备注：可以写补充说明，也可以留空"></textarea>
+      <p id="input-helper" class="input-helper">任务 0 / 60 字，标签 0 / 20 字，备注 0 / 120 字</p>
+      <p id="action-message" class="action-message hidden" role="status"></p>
+    </section>
+
+    <section class="control-card" aria-label="管理待办事项">
+      <div class="todo-tools">
+        <p id="todo-count" class="todo-count">还有 0 件待办未完成</p>
+        <div class="batch-buttons">
+          <button id="complete-all-button" class="complete-all-button" type="button">全部完成</button>
+          <button id="activate-all-button" class="activate-all-button" type="button">全部取消完成</button>
+          <button id="clear-completed-button" class="clear-button" type="button">清除已完成</button>
+          <button id="clear-all-button" class="clear-all-button" type="button">清空全部</button>
+        </div>
+      </div>
+
+      <div class="filter-buttons">
+        <button class="filter-button active" type="button" data-filter="all">全部</button>
+        <button class="filter-button" type="button" data-filter="active">未完成</button>
+        <button class="filter-button" type="button" data-filter="completed">已完成</button>
+      </div>
+
+      <div class="search-tools">
+        <input id="search-input" type="text" maxlength="60" placeholder="搜索待办事项">
+        <button id="clear-search-button" class="clear-search-button" type="button">清空搜索</button>
+      </div>
+      <p id="search-summary" class="search-summary hidden">找到 0 条结果</p>
+
+      <div class="tag-filter-tools">
+        <label for="tag-filter-select">标签筛选</label>
+        <select id="tag-filter-select">
+          <option value="all">全部标签</option>
+        </select>
+      </div>
+
+      <div class="sort-tools">
+        <label for="sort-select">排序方式</label>
+        <select id="sort-select">
+          <option value="original">原来的顺序</option>
+          <option value="dueDate">截止日期优先</option>
+          <option value="priority">优先级优先</option>
+        </select>
+      </div>
+
+      <p id="date-summary" class="date-summary">今天截止 0 件，已逾期 0 件</p>
+      <p id="storage-summary" class="storage-summary">浏览器已保存 0 条任务</p>
+      <div class="data-actions" aria-label="数据管理">
+        <button id="export-button" class="data-button" type="button">导出备份</button>
+        <label class="import-button-label" for="import-file-input">导入备份</label>
+        <input id="import-file-input" class="import-file-input" type="file" accept="application/json,.json">
+        <button id="reset-sample-button" class="data-button" type="button">恢复示例数据</button>
+      </div>
+      <div id="undo-area" class="undo-area hidden">
+        <span id="undo-text">已删除，可撤销。</span>
+        <button id="undo-delete-button" class="undo-button" type="button">撤销</button>
+      </div>
+    </section>
+
+    <ul id="todo-list"></ul>
+    <p id="empty-message" class="empty-message hidden">还没有待办事项，先添加一条吧。</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
