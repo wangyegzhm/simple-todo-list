@@ -38,7 +38,7 @@ const todoInput = document.getElementById('todo-input');
 // ==============================
 
     const storageKey = 'simple-todo-list';
-    const backupVersion = 'V16';
+    const backupVersion = 'V17';
     const maxTodoLength = 60;
     const maxTagLength = 20;
     const maxNoteLength = 120;
@@ -659,6 +659,7 @@ const todoInput = document.getElementById('todo-input');
 
     function renderEditTodo(todo, index) {
       const listItem = document.createElement('li');
+      listItem.className = 'todo-item priority-item-' + getPriorityValue(todo);
       const editArea = document.createElement('div');
       editArea.className = 'edit-area';
 
@@ -729,6 +730,11 @@ const todoInput = document.getElementById('todo-input');
 
     function renderNormalTodo(todo, index) {
       const listItem = document.createElement('li');
+      listItem.className = 'todo-item priority-item-' + getPriorityValue(todo);
+
+      if (todo.completed) {
+        listItem.classList.add('todo-item-completed');
+      }
 
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
